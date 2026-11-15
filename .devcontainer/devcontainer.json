@@ -12,7 +12,12 @@
     "AWS_REGION": "us-east-1",
     "AWS_ENDPOINT_URL": "http://localhost:4566"
   },
-  "forwardPorts": [4566],
+  "forwardPorts": [4500, 4501, 4566],
+  "portsAttributes": {
+    "4500": { "label": "Floci UI", "onAutoForward": "openBrowser" },
+    "4501": { "label": "Floci UI API", "onAutoForward": "silent" },
+    "4566": { "label": "Floci AWS Emulator", "onAutoForward": "silent" }
+  },
   "postStartCommand": "bash .devcontainer/start-emulator.sh",
   "customizations": {
     "vscode": {
