@@ -1,0 +1,7 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+crash.log
+# Optional: uncomment to ignore the provider lock file
+# .terraform.lock.hcl
